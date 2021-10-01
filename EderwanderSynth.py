@@ -41,14 +41,14 @@ def sawtooth(t, width=1):
 
 
 def oscillator(fq, ph, t, a):
-    phase_inc = 2.0*np.pi*fq/fs;
+    phase_inc = 2.0*pi*fq/fs;
     synth_time=np.int(fs*t);
     signal=[]
     for i in range(0, synth_time):
         signal.append(a*sawtooth(ph))
         ph = ph + phase_inc;
     #place the phaser between the 0 and 2pi range
-    ph = np.mod(ph, 2.0*np.pi);
+    ph = mod(ph, 2.0*pi);
     return signal, ph
 
 
@@ -59,7 +59,7 @@ def BPF(sig, fc):
     alpha = sin(omega)/(2*Q);
     B = [sin(omega)/2, 0, -sin(omega)/2];
     A = [1 + alpha, -2 * cos(omega), 1 - alpha];
-    filt_sig=np.zeros(N);
+    filt_sig=zeros(N);
     
     xmem1 = 0;
     xmem2 = 0;
