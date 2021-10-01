@@ -1,3 +1,5 @@
+#Eng Eder de Souza - ederwander
+
 import numpy as np
 from numpy import asarray, zeros, place, nan, mod, pi, extract, log, sqrt, exp, cos, sin, polyval, polyint
 from struct import pack
