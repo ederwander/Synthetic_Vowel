@@ -191,7 +191,7 @@ biquad_filt_Of1=BPF(sig_osc, f1);
 biquad_filt_Of2=BPF(sig_osc, f2);
 
 vowel_O=biquad_filt_Of2+biquad_filt_Of1
-#vowel_O = np.clip(biquad_filt_O, -1, 1)
+
 
 #I
 f1=300;
@@ -204,7 +204,7 @@ biquad_filt_If1=BPF(sig_osc, f1);
 biquad_filt_If2=BPF(sig_osc, f2);
 
 vowel_I=biquad_filt_If2+biquad_filt_If1
-#vowel_I = np.clip(biquad_filt_I, -1, 1)
+
 
 HI = 0.6 * np.concatenate([vowel_O,vowel_I])
 HI = np.clip(HI, -1, 1)
