@@ -92,7 +92,7 @@ fs = 44100;
 phase=0.0;
 
 
-#Vowel Formants F1 and F2 AEIOU table - PT_BR (Brazil)
+#Vowel Formants hertz F1 and F2 AEIOU table - PT_BR (Brazil)
 
 #A
 f1=800;
